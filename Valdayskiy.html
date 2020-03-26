@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Valdaysky </title>
+ </head>
+    <body>
+      <div>  
+      <p> <a href="index.html">Главная</a> </p>
+      </div>
+
+      <div>
+       <h1 align=center> Национальный парк "Валдайский"</h1>
+      </div>
+         
+
+<div id="googleMap" style="width:400;height:400px;;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(58.18, 33.15),
+  zoom:8,
+};
+var g_map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+function place_marker(){
+ var marker = new google.maps.Marker({
+ position: {lat:57.88, lng:33.15},
+ map: g_map
+
+});
+};
+
+g_map.addListener('click', function(e) {
+  place_marker();
+});
+}
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
+<p>Информация о парке:</p>
+<p>
+<li>Находится в северной части Валдайской возвышенности на территориях Окуловского, Валдайского и Демянского районов</li>
+<li>Насчитывает около 200 озёр</li>
+<li>56 озёр с площадью более 20 га</li>
+<li>Площадь парка 1585 кв.км </li>
+</p></ul>
+</body>
+</html>
